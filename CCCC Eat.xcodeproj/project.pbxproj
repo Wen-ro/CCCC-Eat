@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04401D01246A7861003E33C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D00246A7861003E33C7 /* SplashViewController.swift */; };
+		04401D07246A7C5F003E33C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D06246A7C5F003E33C7 /* LoginViewController.swift */; };
+		04401D09246A7CA2003E33C7 /* PersonalinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */; };
+		04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D0B246A7CCC003E33C7 /* DashboardViewController.swift */; };
+		04401D0E246A7ECE003E33C7 /* ChoosestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D0D246A7ECE003E33C7 /* ChoosestoreViewController.swift */; };
+		04401D12246A7EEE003E33C7 /* FamilymartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */; };
+		04401D14246A7EFD003E33C7 /* HiLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D13246A7EFD003E33C7 /* HiLifeViewController.swift */; };
+		04401D16246A7F0B003E33C7 /* OKflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D15246A7F0B003E33C7 /* OKflowViewController.swift */; };
+		04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D19246A7F71003E33C7 /* SocialViewController.swift */; };
+		04401D1C246A7F80003E33C7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D1B246A7F80003E33C7 /* HistoryViewController.swift */; };
+		04401D1F246A7FF0003E33C7 /* SevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D1E246A7FF0003E33C7 /* SevenViewController.swift */; };
+		04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D21246A8C9B003E33C7 /* AsyncRequestWorker.swift */; };
 		045A31FE2461765A007ED48E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A31FD2461765A007ED48E /* AppDelegate.swift */; };
 		045A32002461765A007ED48E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A31FF2461765A007ED48E /* SceneDelegate.swift */; };
 		045A32022461765A007ED48E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A32012461765A007ED48E /* ViewController.swift */; };
@@ -35,6 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04401D00246A7861003E33C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		04401D06246A7C5F003E33C7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinfoViewController.swift; sourceTree = "<group>"; };
+		04401D0B246A7CCC003E33C7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		04401D0D246A7ECE003E33C7 /* ChoosestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosestoreViewController.swift; sourceTree = "<group>"; };
+		04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilymartViewController.swift; sourceTree = "<group>"; };
+		04401D13246A7EFD003E33C7 /* HiLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiLifeViewController.swift; sourceTree = "<group>"; };
+		04401D15246A7F0B003E33C7 /* OKflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKflowViewController.swift; sourceTree = "<group>"; };
+		04401D19246A7F71003E33C7 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		04401D1B246A7F80003E33C7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		04401D1E246A7FF0003E33C7 /* SevenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenViewController.swift; sourceTree = "<group>"; };
+		04401D21246A8C9B003E33C7 /* AsyncRequestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRequestWorker.swift; sourceTree = "<group>"; };
 		045A31FA2461765A007ED48E /* CCCC Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCCC Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		045A31FD2461765A007ED48E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045A31FF2461765A007ED48E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +100,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04401CFC246A7666003E33C7 /* Loginflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D06246A7C5F003E33C7 /* LoginViewController.swift */,
+			);
+			path = Loginflow;
+			sourceTree = "<group>";
+		};
+		04401CFE246A775E003E33C7 /* Personalflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */,
+			);
+			path = Personalflow;
+			sourceTree = "<group>";
+		};
+		04401CFF246A7780003E33C7 /* Choosestoreflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D0D246A7ECE003E33C7 /* ChoosestoreViewController.swift */,
+			);
+			path = Choosestoreflow;
+			sourceTree = "<group>";
+		};
+		04401D03246A78CF003E33C7 /* Familymartflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */,
+			);
+			path = Familymartflow;
+			sourceTree = "<group>";
+		};
+		04401D04246A78DE003E33C7 /* OKflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D15246A7F0B003E33C7 /* OKflowViewController.swift */,
+			);
+			path = OKflow;
+			sourceTree = "<group>";
+		};
+		04401D05246A78E6003E33C7 /* HiLifeflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D13246A7EFD003E33C7 /* HiLifeViewController.swift */,
+			);
+			path = HiLifeflow;
+			sourceTree = "<group>";
+		};
+		04401D0A246A7CAB003E33C7 /* Dashboardflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D0B246A7CCC003E33C7 /* DashboardViewController.swift */,
+			);
+			path = Dashboardflow;
+			sourceTree = "<group>";
+		};
+		04401D17246A7F48003E33C7 /* Socialflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D19246A7F71003E33C7 /* SocialViewController.swift */,
+			);
+			path = Socialflow;
+			sourceTree = "<group>";
+		};
+		04401D18246A7F54003E33C7 /* Historyflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D1B246A7F80003E33C7 /* HistoryViewController.swift */,
+			);
+			path = Historyflow;
+			sourceTree = "<group>";
+		};
+		04401D1D246A7FCD003E33C7 /* Sevenflow */ = {
+			isa = PBXGroup;
+			children = (
+				04401D1E246A7FF0003E33C7 /* SevenViewController.swift */,
+			);
+			path = Sevenflow;
+			sourceTree = "<group>";
+		};
+		04401D20246A8BB4003E33C7 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				04401D21246A8C9B003E33C7 /* AsyncRequestWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		045A31F12461765A007ED48E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +211,17 @@
 		045A31FC2461765A007ED48E /* CCCC Eat */ = {
 			isa = PBXGroup;
 			children = (
+				04401D20246A8BB4003E33C7 /* Worker */,
+				04401D0A246A7CAB003E33C7 /* Dashboardflow */,
+				04401CFC246A7666003E33C7 /* Loginflow */,
+				04401CFE246A775E003E33C7 /* Personalflow */,
+				04401CFF246A7780003E33C7 /* Choosestoreflow */,
+				04401D17246A7F48003E33C7 /* Socialflow */,
+				04401D18246A7F54003E33C7 /* Historyflow */,
+				04401D1D246A7FCD003E33C7 /* Sevenflow */,
+				04401D03246A78CF003E33C7 /* Familymartflow */,
+				04401D05246A78E6003E33C7 /* HiLifeflow */,
+				04401D04246A78DE003E33C7 /* OKflow */,
 				045A31FD2461765A007ED48E /* AppDelegate.swift */,
 				045A31FF2461765A007ED48E /* SceneDelegate.swift */,
 				045A32012461765A007ED48E /* ViewController.swift */,
@@ -106,6 +229,7 @@
 				045A32062461765D007ED48E /* Assets.xcassets */,
 				045A32082461765D007ED48E /* LaunchScreen.storyboard */,
 				045A320B2461765D007ED48E /* Info.plist */,
+				04401D00246A7861003E33C7 /* SplashViewController.swift */,
 			);
 			path = "CCCC Eat";
 			sourceTree = "<group>";
@@ -260,8 +384,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				045A32022461765A007ED48E /* ViewController.swift in Sources */,
+				04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */,
+				04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */,
+				04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */,
+				04401D16246A7F0B003E33C7 /* OKflowViewController.swift in Sources */,
+				04401D12246A7EEE003E33C7 /* FamilymartViewController.swift in Sources */,
+				04401D1C246A7F80003E33C7 /* HistoryViewController.swift in Sources */,
 				045A31FE2461765A007ED48E /* AppDelegate.swift in Sources */,
 				045A32002461765A007ED48E /* SceneDelegate.swift in Sources */,
+				04401D07246A7C5F003E33C7 /* LoginViewController.swift in Sources */,
+				04401D09246A7CA2003E33C7 /* PersonalinfoViewController.swift in Sources */,
+				04401D01246A7861003E33C7 /* SplashViewController.swift in Sources */,
+				04401D0E246A7ECE003E33C7 /* ChoosestoreViewController.swift in Sources */,
+				04401D1F246A7FF0003E33C7 /* SevenViewController.swift in Sources */,
+				04401D14246A7EFD003E33C7 /* HiLifeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
