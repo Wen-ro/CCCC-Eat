@@ -1,0 +1,6 @@
+framework module Pods_CCCC_EatTests {
+  umbrella header "Pods-CCCC EatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_CCCC_Eat {
+  umbrella header "Pods-CCCC Eat-umbrella.h"
+
+  export *
+  module * { export * }
+}
