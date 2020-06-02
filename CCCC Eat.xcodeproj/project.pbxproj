@@ -300,7 +300,6 @@
 				24F209840CB0E22051F4B34D /* Pods-CCCC EatTests.debug.xcconfig */,
 				A98C4FF2E71D653DAF6C4D43 /* Pods-CCCC EatTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
