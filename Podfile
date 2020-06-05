@@ -7,6 +7,7 @@ target 'CCCC Eat' do
 
   # Pods for CCCC Eat
   pod 'Alamofire', '~> 5.2'
+  pod 'SwiftyJSON', '~> 4.0'
   
   target 'CCCC EatTests' do
     inherit! :search_paths

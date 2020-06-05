@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class OKflowViewController: UIViewController {
 
@@ -14,6 +15,34 @@ class OKflowViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        AF.request("https://smartfood.azurewebsites.net/api/FoodApi").responseString(completionHandler: {
+        response
+        in
+        
+        switch( response.result ){
+        case let .success(value) :
+        
+            print(value)
+            //print(response.response!.statusCode)
+            
+            // 注意 guard 的使用方法。
+            guard 200 == response.response!.statusCode else {
+                
+                
+                
+                return
+            }
+            
+            
+            break;
+        case let .failure(error) :
+            
+            print(error.localizedDescription)
+            break;
+        }
+        
+        })
     }
     
 

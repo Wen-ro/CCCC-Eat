@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		040161D4246E898100D58FFC /* BuildAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040161D3246E898100D58FFC /* BuildAccountViewController.swift */; };
+		04191D7C248A7CD10013B8F9 /* FirstpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04191D7B248A7CD10013B8F9 /* FirstpageViewController.swift */; };
 		04401D01246A7861003E33C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D00246A7861003E33C7 /* SplashViewController.swift */; };
 		04401D07246A7C5F003E33C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D06246A7C5F003E33C7 /* LoginViewController.swift */; };
 		04401D09246A7CA2003E33C7 /* PersonalinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		02CA6E6835D16A196CD9D950 /* Pods-CCCC Eat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCCC Eat.release.xcconfig"; path = "Target Support Files/Pods-CCCC Eat/Pods-CCCC Eat.release.xcconfig"; sourceTree = "<group>"; };
 		040161D3246E898100D58FFC /* BuildAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildAccountViewController.swift; sourceTree = "<group>"; };
+		04191D7B248A7CD10013B8F9 /* FirstpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstpageViewController.swift; sourceTree = "<group>"; };
 		04401D00246A7861003E33C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		04401D06246A7C5F003E33C7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinfoViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 				040161D3246E898100D58FFC /* BuildAccountViewController.swift */,
 			);
 			path = BuildAccountflow;
+			sourceTree = "<group>";
+		};
+		04191D7A248A7C710013B8F9 /* Firstpageflow */ = {
+			isa = PBXGroup;
+			children = (
+				04191D7B248A7CD10013B8F9 /* FirstpageViewController.swift */,
+			);
+			path = Firstpageflow;
 			sourceTree = "<group>";
 		};
 		04401CFC246A7666003E33C7 /* Loginflow */ = {
@@ -238,6 +248,7 @@
 		045A31FC2461765A007ED48E /* CCCC Eat */ = {
 			isa = PBXGroup;
 			children = (
+				04191D7A248A7C710013B8F9 /* Firstpageflow */,
 				040161D2246E892400D58FFC /* BuildAccountflow */,
 				04401D20246A8BB4003E33C7 /* Worker */,
 				04401D0A246A7CAB003E33C7 /* Dashboardflow */,
@@ -314,6 +325,7 @@
 				045A31F62461765A007ED48E /* Sources */,
 				045A31F72461765A007ED48E /* Frameworks */,
 				045A31F82461765A007ED48E /* Resources */,
+				837C9AC33FB2145ADE1E66F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,6 +363,7 @@
 				045A32172461765E007ED48E /* Sources */,
 				045A32182461765E007ED48E /* Frameworks */,
 				045A32192461765E007ED48E /* Resources */,
+				CA8190044769EF1AD4B84D94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,6 +446,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		837C9AC33FB2145ADE1E66F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat/Pods-CCCC Eat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat/Pods-CCCC Eat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat/Pods-CCCC Eat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D9E8EF25A8A1DB8C2061ED6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +507,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CA8190044769EF1AD4B84D94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat-CCCC EatUITests/Pods-CCCC Eat-CCCC EatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat-CCCC EatUITests/Pods-CCCC Eat-CCCC EatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCCC Eat-CCCC EatUITests/Pods-CCCC Eat-CCCC EatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E977292C669DF1022BF10F3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045A32022461765A007ED48E /* ViewController.swift in Sources */,
+				04191D7C248A7CD10013B8F9 /* FirstpageViewController.swift in Sources */,
 				04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */,
 				04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */,
 				04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */,

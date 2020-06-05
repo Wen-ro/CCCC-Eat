@@ -11,7 +11,8 @@ import UIKit
 class SplashViewController: UIViewController {
     
     var asyncWorker : AsyncRequestWorker = AsyncRequestWorker()
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class SplashViewController: UIViewController {
         
         asyncWorker.reponseDelegate = self
         
-        asyncWorker.getResponse(from: "https://google.com", tag: 0)
+        asyncWorker.getResponse(from: "https://smartfood.azurewebsites.net", tag: 0)
         
         
     }
