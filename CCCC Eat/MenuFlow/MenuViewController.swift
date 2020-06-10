@@ -1,5 +1,5 @@
 //
-//  FamilymartViewController.swift
+//  SevenViewController.swift
 //  CCCC Eat
 //
 //  Created by chang on 2020/5/12.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class FamilymartViewController: UIViewController {
+class MenuViewController : UIViewController {
     
     var foods : [Food] = []
     var selectedFood : Food?
@@ -93,7 +93,8 @@ class FamilymartViewController: UIViewController {
     }
 
 }
-extension FamilymartViewController : UITableViewDelegate, UITableViewDataSource {
+
+extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
@@ -105,9 +106,10 @@ extension FamilymartViewController : UITableViewDelegate, UITableViewDataSource 
         
         let food : Food = self.foods[row]
         
-        let cell : Recommend1ViewCell = tableView.dequeueReusableCell(withIdentifier: "moveToRecommend1" ) as! Recommend1ViewCell
+        let cell : RecommendViewCell = tableView.dequeueReusableCell(withIdentifier: "moveToRecommend" ) as! RecommendViewCell
         
-
+        cell.updateContent(food: food)
+        
         return cell
         
     }
