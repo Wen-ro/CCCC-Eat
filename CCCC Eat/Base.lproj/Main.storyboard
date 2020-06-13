@@ -272,11 +272,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" backgroundImage="OKmart_logo"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f15-lK-9CE">
-                                <rect key="frame" x="57" y="457" width="140" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f15-lK-9CE">
+                                <rect key="frame" x="76" y="457" width="103" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" backgroundImage="hilife_logo"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="hilife_logo">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -475,68 +477,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gmK-cX-267" kind="relationship" relationship="viewControllers" id="hpI-St-2eU"/>
                         <segue destination="IMf-u6-0s2" kind="relationship" relationship="viewControllers" id="11i-SQ-1LO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv9-lQ-sRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4336" y="714"/>
-        </scene>
-        <!--全家-->
-        <scene sceneID="UIT-GM-gNJ">
-            <objects>
-                <viewController title="全家" id="gmK-cX-267" customClass="FamilymartViewController" customModule="CCCC_Eat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sJU-75-F9U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="全家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-do-yP3">
-                                <rect key="frame" x="171" y="82" width="77" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-tK-rot">
-                                <rect key="frame" x="69" y="189" width="150" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="推薦組合"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pot-lh-tVO">
-                                <rect key="frame" x="107" y="254" width="75" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="主餐"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF8-vb-rU1">
-                                <rect key="frame" x="107" y="319" width="75" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="副餐"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIG-cL-DkQ">
-                                <rect key="frame" x="107" y="384" width="75" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="甜品"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-9C-JVR">
-                                <rect key="frame" x="107" y="449" width="75" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="飲料"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Ufg-i2-Dnm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="全家" id="Nao-ak-g74"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LSs-Dn-bKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5420" y="1531"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gOq-qg-ZgH">
@@ -613,120 +559,17 @@
             </objects>
             <point key="canvasLocation" x="1712" y="1531"/>
         </scene>
-        <!--FamilymartMenu-->
-        <scene sceneID="YpB-pl-rkH">
-            <objects>
-                <viewController title="FamilymartMenu" id="hcK-fp-Oag" customClass="FamilymartViewController" customModule="CCCC_Eat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GBE-Vy-Vkp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldS-I2-0YD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moveToRecommend1" rowHeight="130" id="6SG-1J-svg" customClass="RecommendViewCell" customModule="CCCC_Eat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6SG-1J-svg" id="Yh4-2a-Dc3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5le-FU-ufN">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="0GY-gm-teV"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce4-hR-w1K">
-                                                    <rect key="frame" x="20" y="40" width="374" height="79"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Ce4-hR-w1K" firstAttribute="leading" secondItem="Yh4-2a-Dc3" secondAttribute="leadingMargin" id="B0A-rt-w0b"/>
-                                                <constraint firstItem="5le-FU-ufN" firstAttribute="leading" secondItem="Yh4-2a-Dc3" secondAttribute="leadingMargin" id="Jvy-ry-6RF"/>
-                                                <constraint firstItem="Ce4-hR-w1K" firstAttribute="bottom" secondItem="Yh4-2a-Dc3" secondAttribute="bottomMargin" id="YgB-o4-wAr"/>
-                                                <constraint firstItem="Ce4-hR-w1K" firstAttribute="trailing" secondItem="Yh4-2a-Dc3" secondAttribute="trailingMargin" id="cek-zS-M6U"/>
-                                                <constraint firstItem="5le-FU-ufN" firstAttribute="top" secondItem="Yh4-2a-Dc3" secondAttribute="topMargin" id="f35-lR-Wl6"/>
-                                                <constraint firstItem="Ce4-hR-w1K" firstAttribute="top" secondItem="5le-FU-ufN" secondAttribute="bottom" constant="8" id="nYc-JN-a8G"/>
-                                                <constraint firstItem="5le-FU-ufN" firstAttribute="trailing" secondItem="Yh4-2a-Dc3" secondAttribute="trailingMargin" id="oym-vy-dav"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="descriptionLabel" destination="Ce4-hR-w1K" id="ZBu-mC-umd"/>
-                                            <outlet property="titleLabel" destination="5le-FU-ufN" id="nBa-PI-lmt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="hcK-fp-Oag" id="MdX-Ry-uJw"/>
-                                    <outlet property="delegate" destination="hcK-fp-Oag" id="pZX-gL-S2b"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ldS-I2-0YD" secondAttribute="bottom" id="RhR-HW-dyb"/>
-                            <constraint firstItem="ldS-I2-0YD" firstAttribute="leading" secondItem="L2F-Nb-g7N" secondAttribute="leading" id="Yyx-dN-ibR"/>
-                            <constraint firstItem="ldS-I2-0YD" firstAttribute="trailing" secondItem="L2F-Nb-g7N" secondAttribute="trailing" id="rcf-zD-T6L"/>
-                            <constraint firstItem="ldS-I2-0YD" firstAttribute="top" secondItem="GBE-Vy-Vkp" secondAttribute="top" id="yqh-f4-bOD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="L2F-Nb-g7N"/>
-                    </view>
-                    <connections>
-                        <outlet property="foodTable" destination="ldS-I2-0YD" id="TlI-eU-zaD"/>
-                        <segue destination="nzV-5D-yj5" kind="show" identifier="moveToFoodDetail" id="7Kp-zz-MJx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YWW-he-9mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6228" y="1531"/>
-        </scene>
-        <!--Food Detail View Controller-->
-        <scene sceneID="TZd-VW-OYA">
-            <objects>
-                <viewController id="nzV-5D-yj5" customClass="FoodDetailViewController" customModule="CCCC_Eat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UlM-v1-457">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-Z0-Lu2">
-                                <rect key="frame" x="60" y="112" width="260" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="SH7-jf-qnJ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZHu-mt-WSU"/>
-                    <connections>
-                        <outlet property="titleLabel" destination="oMH-Z0-Lu2" id="phy-0D-U5g"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LXS-uf-AYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7022" y="1531"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="7_eleven_logo" width="33.5" height="33"/>
+        <image name="7_eleven_logo" width="63" height="62.5"/>
         <image name="Entry" width="86" height="26"/>
-        <image name="OKmart_logo" width="28" height="28.5"/>
+        <image name="OKmart_logo" width="63" height="62.5"/>
         <image name="Register_button" width="86" height="26"/>
         <image name="Sign_in_button" width="86" height="26"/>
         <image name="SplashBackground" width="2844.666748046875" height="2844.666748046875"/>
         <image name="confirm_button" width="86" height="26"/>
-        <image name="familymart_logo" width="38" height="38"/>
-        <image name="hilife_logo" width="37" height="30.5"/>
+        <image name="familymart_logo" width="56" height="56"/>
+        <image name="hilife_logo" width="55" height="55"/>
         <image name="nextstep" width="59" height="18.5"/>
         <image name="submit" width="59" height="18.5"/>
     </resources>

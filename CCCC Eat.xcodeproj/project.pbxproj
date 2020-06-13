@@ -14,7 +14,6 @@
 		04401D09246A7CA2003E33C7 /* PersonalinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */; };
 		04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D0B246A7CCC003E33C7 /* DashboardViewController.swift */; };
 		04401D0E246A7ECE003E33C7 /* ChoosestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D0D246A7ECE003E33C7 /* ChoosestoreViewController.swift */; };
-		04401D12246A7EEE003E33C7 /* FamilymartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */; };
 		04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D19246A7F71003E33C7 /* SocialViewController.swift */; };
 		04401D1C246A7F80003E33C7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D1B246A7F80003E33C7 /* HistoryViewController.swift */; };
 		04401D1F246A7FF0003E33C7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04401D1E246A7FF0003E33C7 /* MenuViewController.swift */; };
@@ -30,9 +29,6 @@
 		04A41C75248F591300376EAC /* RecommendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C74248F591300376EAC /* RecommendViewCell.swift */; };
 		04A41C77248F5D6300376EAC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C76248F5D6300376EAC /* Food.swift */; };
 		04A41C79248F60FF00376EAC /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C78248F60FF00376EAC /* FoodDetailViewController.swift */; };
-		04A41C86248F6F0B00376EAC /* Recommend1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C85248F6F0B00376EAC /* Recommend1ViewCell.swift */; };
-		04A41C88248F73CC00376EAC /* FoodDetail1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C87248F73CC00376EAC /* FoodDetail1ViewController.swift */; };
-		04A41C8A248F73DB00376EAC /* Food1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C89248F73DB00376EAC /* Food1.swift */; };
 		04A41C8E248F7CE300376EAC /* MealSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C8D248F7CE300376EAC /* MealSet.swift */; };
 		04A41C90248F7E2900376EAC /* StoreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C8F248F7E2900376EAC /* StoreViewCell.swift */; };
 		04A41C92248F93B800376EAC /* MealSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C91248F93B800376EAC /* MealSetViewController.swift */; };
@@ -68,7 +64,6 @@
 		04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinfoViewController.swift; sourceTree = "<group>"; };
 		04401D0B246A7CCC003E33C7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		04401D0D246A7ECE003E33C7 /* ChoosestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosestoreViewController.swift; sourceTree = "<group>"; };
-		04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilymartViewController.swift; sourceTree = "<group>"; };
 		04401D19246A7F71003E33C7 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		04401D1B246A7F80003E33C7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		04401D1E246A7FF0003E33C7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -90,9 +85,6 @@
 		04A41C74248F591300376EAC /* RecommendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewCell.swift; sourceTree = "<group>"; };
 		04A41C76248F5D6300376EAC /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		04A41C78248F60FF00376EAC /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
-		04A41C85248F6F0B00376EAC /* Recommend1ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommend1ViewCell.swift; sourceTree = "<group>"; };
-		04A41C87248F73CC00376EAC /* FoodDetail1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetail1ViewController.swift; sourceTree = "<group>"; };
-		04A41C89248F73DB00376EAC /* Food1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food1.swift; sourceTree = "<group>"; };
 		04A41C8D248F7CE300376EAC /* MealSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSet.swift; sourceTree = "<group>"; };
 		04A41C8F248F7E2900376EAC /* StoreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewCell.swift; sourceTree = "<group>"; };
 		04A41C91248F93B800376EAC /* MealSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSetViewController.swift; sourceTree = "<group>"; };
@@ -175,17 +167,6 @@
 			path = Choosestoreflow;
 			sourceTree = "<group>";
 		};
-		04401D03246A78CF003E33C7 /* Familymartflow */ = {
-			isa = PBXGroup;
-			children = (
-				04A41C7A248F65EF00376EAC /* Cell */,
-				04401D11246A7EEE003E33C7 /* FamilymartViewController.swift */,
-				04A41C87248F73CC00376EAC /* FoodDetail1ViewController.swift */,
-				04A41C89248F73DB00376EAC /* Food1.swift */,
-			);
-			path = Familymartflow;
-			sourceTree = "<group>";
-		};
 		04401D0A246A7CAB003E33C7 /* Dashboardflow */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +247,6 @@
 				04401D17246A7F48003E33C7 /* Socialflow */,
 				04401D18246A7F54003E33C7 /* Historyflow */,
 				04401D1D246A7FCD003E33C7 /* MenuFlow */,
-				04401D03246A78CF003E33C7 /* Familymartflow */,
 				045A31FD2461765A007ED48E /* AppDelegate.swift */,
 				045A31FF2461765A007ED48E /* SceneDelegate.swift */,
 				045A32012461765A007ED48E /* ViewController.swift */,
@@ -303,14 +283,6 @@
 				04A41C8F248F7E2900376EAC /* StoreViewCell.swift */,
 				04A41C93248F948F00376EAC /* MealSetViewCell.swift */,
 				04A41C74248F591300376EAC /* RecommendViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		04A41C7A248F65EF00376EAC /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				04A41C85248F6F0B00376EAC /* Recommend1ViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -584,13 +556,9 @@
 				04A41C94248F948F00376EAC /* MealSetViewCell.swift in Sources */,
 				04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */,
 				04A41C8E248F7CE300376EAC /* MealSet.swift in Sources */,
-				04A41C86248F6F0B00376EAC /* Recommend1ViewCell.swift in Sources */,
 				04A41C77248F5D6300376EAC /* Food.swift in Sources */,
 				04A41C92248F93B800376EAC /* MealSetViewController.swift in Sources */,
-				04A41C88248F73CC00376EAC /* FoodDetail1ViewController.swift in Sources */,
 				04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */,
-				04A41C8A248F73DB00376EAC /* Food1.swift in Sources */,
-				04401D12246A7EEE003E33C7 /* FamilymartViewController.swift in Sources */,
 				04401D1C246A7F80003E33C7 /* HistoryViewController.swift in Sources */,
 				045A31FE2461765A007ED48E /* AppDelegate.swift in Sources */,
 				045A32002461765A007ED48E /* SceneDelegate.swift in Sources */,
