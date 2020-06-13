@@ -11,9 +11,17 @@ import Alamofire
 
 class PersonalinfoViewController: UIViewController {
     
+    @IBOutlet weak var InfoEntry: UITextField!
+    @IBOutlet weak var selectinfo: UILabel!
+    @IBOutlet weak var infoPicker: UIPickerView!
+    var genders : [String] = ["男", "女"]
+    var jobs : [String] = ["輕度工作", "中度工作", "重度工作"]
+    var recond : [String] = []
+    
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToChoosestoreSegue2", sender: self)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,3 +69,61 @@ class PersonalinfoViewController: UIViewController {
     */
 
 }
+extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if( 101 == pickerView.tag ){
+            return genders.count
+        }
+        if( 102 == pickerView.tag ){
+            return jobs.count
+        }
+        
+        return 0
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if( 101 == pickerView.tag ){
+            return genders[row]
+        }
+        if( 102 == pickerView.tag ){
+            return jobs[row]
+        }
+        return "N/A"
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        print("pickerView tag:\(pickerView.tag);component:\(component) ;row:\( row )")
+        
+        
+        if( 101 == pickerView.tag ){
+            let gender = genders[row]
+            print(gender)
+        if( 102 == pickerView.tag ){
+            let job = jobs[row]
+            print(job)
+            
+        
+            recond = [genders[row], jobs[row]]
+            print(recond[0], recond[1])
+        }
+    }
+}
+}
+ 
+    // 按下Return後會反應的事件
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //利用此方式讓按下Return後會Toogle 鍵盤讓它消失
+        textField.resignFirstResponder()
+        print("按下Return")
+        return false
+    }
+ 
