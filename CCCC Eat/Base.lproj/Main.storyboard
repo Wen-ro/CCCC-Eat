@@ -232,8 +232,6 @@
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                 <connections>
                                     <outlet property="delegate" destination="6Eh-NW-qoF" id="wud-Nd-kOk"/>
-                                    <outlet property="textDragDelegate" destination="6Eh-NW-qoF" id="gG1-h0-tQe"/>
-                                    <segue destination="6Eh-NW-qoF" kind="show" id="Vq6-aD-U3X"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -242,7 +240,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uus-za-zoF"/>
                     <connections>
-                        <outlet property="InfoEntry" destination="mMm-tN-f6C" id="Kxw-hE-vKq"/>
                         <outlet property="infoPicker" destination="zKZ-BP-ZOb" id="na0-CB-Fb9"/>
                         <outlet property="selectinfo" destination="0lp-Yw-mYz" id="cR9-sR-HgI"/>
                         <segue destination="fP5-uN-YdE" kind="show" identifier="moveToChoosestoreSegue2" id="4MV-CK-uYm"/>
