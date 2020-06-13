@@ -11,9 +11,16 @@ import Alamofire
 
 class ChoosestoreViewController: UIViewController {
 
+    @IBAction func moveToMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "moveToMenu", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
         // Do any additional setup after loading the view.
         
         AF.request("https://smartfood.azurewebsites.net/api/ProfileApi/2").responseString(completionHandler: {
