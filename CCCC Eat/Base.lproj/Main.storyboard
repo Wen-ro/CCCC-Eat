@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Eh-NW-qoF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RV6-dc-kub">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -96,6 +96,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fQr-a6-nKg" id="8gS-ti-ZHt"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yq-wv-UH5">
                                 <rect key="frame" x="161" y="782" width="92" height="34"/>
@@ -109,6 +112,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fQr-a6-nKg" id="kIM-Vl-SRi"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y21-pj-eeb">
                                 <rect key="frame" x="57" y="510" width="300" height="90"/>
@@ -134,6 +140,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lPl-CA-rbE"/>
                     <connections>
+                        <outlet property="LoginEntry" destination="ylW-yL-ApH" id="VP3-Vl-DZm"/>
                         <segue destination="fP5-uN-YdE" kind="show" identifier="moveToChoosestoreSegue1" id="MUX-Ae-KKF"/>
                     </connections>
                 </viewController>
@@ -554,6 +561,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6GB-3R-0MH" id="1iw-yQ-vb9"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="Entry" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-Gt-X6X">
                                 <rect key="frame" x="35" y="391" width="345" height="90"/>
@@ -561,6 +571,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6GB-3R-0MH" id="gMv-mE-ECB"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-HB-1sx">
                                 <rect key="frame" x="57" y="597" width="300" height="90"/>
@@ -576,6 +589,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6GB-3R-0MH" id="g8u-6F-Kba"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -583,6 +599,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FDQ-OM-riB"/>
                     <connections>
+                        <outlet property="NewAccountEntry" destination="chi-pr-TOg" id="2Lo-QN-rlm"/>
                         <segue destination="6Eh-NW-qoF" kind="show" identifier="moveToPersonalinfoSegue" id="mBz-BV-yDE"/>
                     </connections>
                 </viewController>
@@ -606,6 +623,6 @@
         <image name="submit" width="59" height="18.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4MV-CK-uYm"/>
+        <segue reference="MUX-Ae-KKF"/>
     </inferredMetricsTieBreakers>
 </document>

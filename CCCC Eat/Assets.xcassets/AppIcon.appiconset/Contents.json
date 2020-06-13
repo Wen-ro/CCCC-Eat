@@ -33,13 +33,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "120.png",
+      "filename" : "logo白底_120.jpg",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "180.png",
+      "filename" : "logo白底_180.jpg",
       "scale" : "3x"
     },
     {
@@ -85,13 +85,13 @@
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "167.png",
+      "filename" : "logo白底_167.jpg",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "1024logo-2.png",
+      "filename" : "logo白底_1024.jpg",
       "scale" : "1x"
     }
   ],

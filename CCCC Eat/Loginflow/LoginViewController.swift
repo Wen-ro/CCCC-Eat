@@ -11,6 +11,7 @@ import Alamofire
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var LoginEntry: UITextField!
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToChoosestoreSegue1", sender: self)
     }
@@ -60,4 +61,17 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+
+extension LoginViewController: UITextFieldDelegate{
+    func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //利用此方式讓按下Return後會Toogle 鍵盤讓它消失
+        textField.resignFirstResponder()
+        print("按下Return")
+        return false
+    }
 }
