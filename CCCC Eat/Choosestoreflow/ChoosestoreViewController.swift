@@ -11,16 +11,25 @@ import Alamofire
 
 class ChoosestoreViewController: UIViewController {
 
-<<<<<<< HEAD
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToMenu", sender: self)
     }
-=======
+
     var registrationInfo : Registration?
     
->>>>>>> 966f4e554f5ec00617638e3de156f88b09cdb794
+    @IBOutlet weak var GenderLabel: UILabel!
+    @IBOutlet weak var AgeLabel: UILabel!
+    @IBOutlet weak var WorkLabel: UILabel!
+    @IBOutlet weak var HeightLabel: UILabel!
+    @IBOutlet weak var WeightLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        GenderLabel.text = "\(String(describing: registrationInfo?.userGender))"
+        AgeLabel.text = "\(String(describing: registrationInfo?.userAge))"
+        WorkLabel.text = (registrationInfo?.userWorkingType).map { $0.rawValue }
+        HeightLabel.text = "\(String(describing: registrationInfo?.userHeight))"
+        WeightLabel.text = "\(String(describing: registrationInfo?.userWeight))"
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
@@ -58,7 +67,7 @@ class ChoosestoreViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -66,6 +75,6 @@ class ChoosestoreViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

@@ -29,9 +29,8 @@ class PersonalinfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         //
-        self.registrationInfo = Registration(userGender: .Male, userWorkingType: .Light)
+        self.registrationInfo = Registration(userGender: .Male, userAge: .age, userWorkingType: .Light, userName: .name, userHeight: .h, userWeight: .w)
         
         AF.request("https://smartfood.azurewebsites.net/api/ProfileApi/2").responseString(completionHandler: {
         response
@@ -62,7 +61,6 @@ class PersonalinfoViewController: UIViewController {
         })
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch segue.identifier {
@@ -86,11 +84,20 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
         self.view.endEditing(true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //利用此方式讓按下Return後會Toogle 鍵盤讓它消失
         textField.resignFirstResponder()
         print("按下Return")
-        return false
+        //print 出自輸入的值
+        print(textField.text ?? "")
+        self.registrationInfo?.userName = .name
+        self.registrationInfo?.userAge = .age
+        self.registrationInfo?.userHeight = .h
+        self.registrationInfo?.userWeight = .w
+        return true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
