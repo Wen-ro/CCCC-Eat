@@ -11,6 +11,8 @@ import Alamofire
 
 class ChoosestoreViewController: UIViewController {
 
+    var registrationInfo : Registration?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
