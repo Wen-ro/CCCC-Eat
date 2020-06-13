@@ -11,9 +11,14 @@ import Alamofire
 
 class ChoosestoreViewController: UIViewController {
 
+<<<<<<< HEAD
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToMenu", sender: self)
     }
+=======
+    var registrationInfo : Registration?
+    
+>>>>>>> 966f4e554f5ec00617638e3de156f88b09cdb794
     override func viewDidLoad() {
         super.viewDidLoad()
         
