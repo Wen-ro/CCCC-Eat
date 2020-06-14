@@ -11,9 +11,18 @@ import Alamofire
 
 
 // MARK: - Profile工作
-struct Profile: Codable {
-    var id: Int
-    var name, gender, birthday: String
-    var height, weight, expectDailyCalorie, expectBreakfastCalorie: Int
-    var expectLunchCalorie, expectDinnerCalorie: Int
+class Profile: NSObject {
+    var id: Int = 0
+    var name : String = "N/A"
+    var gender: String = "N/A"
+    var userGender : Gender = Gender.Female
+    var birthday: String = "N/A"
+    var age : Int = 0
+    var height : Int = 0
+    var weight : Int = 0
+    var userWorkingType : WorkingType = WorkingType.Light
+    var expectDailyCalorie : Int = 0
+    var expectBreakfastCalorie : Int = 0
+    var expectLunchCalorie : Int = 0
+    var expectDinnerCalorie: Int = 0
 }

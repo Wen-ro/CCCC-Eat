@@ -16,6 +16,7 @@ class ChoosestoreViewController: UIViewController {
     }
 
     var registrationInfo : Registration!
+    var fromRegistrationView : Bool = false
     
     @IBOutlet weak var GenderLabel: UILabel!
     @IBOutlet weak var AgeLabel: UILabel!
@@ -25,11 +26,24 @@ class ChoosestoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GenderLabel.text = self.registrationInfo.userGender.rawValue
-        AgeLabel.text =  "\( self.registrationInfo.userAge )"
-        WorkLabel.text = self.registrationInfo.userWorkingType.rawValue
-        HeightLabel.text = "\( self.registrationInfo.userHeight )"
-        WeightLabel.text = "\( self.registrationInfo.userWeight )"
+        
+        if fromRegistrationView {
+            GenderLabel.text = self.registrationInfo.userGender.rawValue
+            AgeLabel.text =  "\( self.registrationInfo.userAge )"
+            WorkLabel.text = self.registrationInfo.userWorkingType.rawValue
+            HeightLabel.text = "\( self.registrationInfo.userHeight )"
+            WeightLabel.text = "\( self.registrationInfo.userWeight )"
+        }
+        else{
+            
+            GenderLabel.text = AppDelegate.currentUserProfile.userGender.rawValue
+            AgeLabel.text =  "\( AppDelegate.currentUserProfile.age )"
+            WorkLabel.text = AppDelegate.currentUserProfile.userWorkingType.rawValue
+            HeightLabel.text = "\( AppDelegate.currentUserProfile.height )"
+            WeightLabel.text = "\( AppDelegate.currentUserProfile.weight )"
+        }
+        
+        
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
