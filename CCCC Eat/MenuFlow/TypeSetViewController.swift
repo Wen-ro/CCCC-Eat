@@ -1,5 +1,5 @@
 //
-//  MealSetViewController.swift
+//  TypeSetViewController.swift
 //  CCCC Eat
 //
 //  Created by chang on 2020/6/9.
@@ -8,23 +8,41 @@
 
 import UIKit
 
-class MealSetViewController: UIViewController {
+class TypeSetViewController: UIViewController {
 
-    var mealSets : [MealSet] = []
-    var selectedMealSet : MealSet?
+    
+    var TypeSets : [TypeSet] = []
+    var selectedTypeSet : TypeSet?
+    var FigureName = ["recommend", "sandwich", "rice", "noodles", "dessert", "beverage"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        var mealA : MealSet = MealSet()
-        mealA.name = "A"
-        mealSets.append(mealA)
+        var typeA : TypeSet = TypeSet()
+        typeA.name = "推薦組合"
+        TypeSets.append(typeA)
         
-        var mealB : MealSet = MealSet()
-        mealB.name = "B"
-        mealSets.append(mealB)
+        var typeB : TypeSet = TypeSet()
+        typeB.name = "三明治"
+        TypeSets.append(typeB)
+        
+        var typeC : TypeSet = TypeSet()
+        typeC.name = "飯類"
+        TypeSets.append(typeC)
+        
+        var typeD : TypeSet = TypeSet()
+        typeD.name = "麵類"
+        TypeSets.append(typeD)
+        
+        var typeE : TypeSet = TypeSet()
+        typeE.name = "甜點"
+        TypeSets.append(typeE)
+        
+        var typeF : TypeSet = TypeSet()
+        typeF.name = "飲料"
+        TypeSets.append(typeF)
     }
     
 
@@ -36,21 +54,23 @@ class MealSetViewController: UIViewController {
 }
 
 
-extension MealSetViewController : UITableViewDelegate, UITableViewDataSource {
+extension TypeSetViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mealSets.count
+        return TypeSets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = indexPath.row
         
-        let food : MealSet = self.mealSets[row]
+        let food : TypeSet = self.TypeSets[row]
         
-        let cell : MealSetViewCell = tableView.dequeueReusableCell(withIdentifier: "MealSetViewCell" ) as! MealSetViewCell
+        let cell : TypeSetViewCell = tableView.dequeueReusableCell(withIdentifier: "MealSetViewCell" ) as! TypeSetViewCell
         
         cell.updateContent(meal: food)
+        
+        cell.imageView?.image = UIImage(named: FigureName[row])
         
         return cell
         
@@ -62,7 +82,7 @@ extension MealSetViewController : UITableViewDelegate, UITableViewDataSource {
         
         let row = indexPath.row
         
-        self.selectedMealSet = self.mealSets[row]
+        self.selectedTypeSet = self.TypeSets[row]
         
         
         self.performSegue(withIdentifier: "moveToFoodDetail", sender: self)

@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct MealSet {
+struct TypeSet {
     var name : String = ""
 }
