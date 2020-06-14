@@ -106,7 +106,7 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
         
         let food : Food = self.foods[row]
         
-        let cell : RecommendViewCell = tableView.dequeueReusableCell(withIdentifier: "moveToRecommend" ) as! RecommendViewCell
+        let cell : RecommendViewCell = tableView.dequeueReusableCell(withIdentifier: RecommendViewCell.identifier) as! RecommendViewCell
         
         cell.updateContent(food: food)
         

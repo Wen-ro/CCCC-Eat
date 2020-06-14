@@ -11,6 +11,9 @@ import UIKit
 class TypeSetViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    
+    static let identifier = "TypeSetViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +26,9 @@ class TypeSetViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateContent(meal : TypeSet) {
+    func updateContent(meal : TypeSet, imageName : String) {
         self.titleLabel.text = meal.name
+        self.productImageView.image = UIImage(named: imageName)
     }
 
 }

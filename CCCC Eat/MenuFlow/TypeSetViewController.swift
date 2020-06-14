@@ -15,6 +15,8 @@ class TypeSetViewController: UIViewController {
     var selectedTypeSet : TypeSet?
     var FigureName = ["recommend", "sandwich", "rice", "noodles", "dessert", "beverage"]
     
+    @IBOutlet weak var typeSetTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,11 +68,9 @@ extension TypeSetViewController : UITableViewDelegate, UITableViewDataSource {
         
         let food : TypeSet = self.TypeSets[row]
         
-        let cell : TypeSetViewCell = tableView.dequeueReusableCell(withIdentifier: "MealSetViewCell" ) as! TypeSetViewCell
+        let cell : TypeSetViewCell = tableView.dequeueReusableCell(withIdentifier: TypeSetViewCell.identifier ) as! TypeSetViewCell
         
-        cell.updateContent(meal: food)
-        
-        cell.imageView?.image = UIImage(named: FigureName[row])
+        cell.updateContent(meal: food, imageName: FigureName[row])
         
         return cell
         
@@ -85,7 +85,7 @@ extension TypeSetViewController : UITableViewDelegate, UITableViewDataSource {
         self.selectedTypeSet = self.TypeSets[row]
         
         
-        self.performSegue(withIdentifier: "moveToFoodDetail", sender: self)
+        self.performSegue(withIdentifier: "moveToMenuViewSegue", sender: self)
         
 //        switch indexPath.row {
 //        case 0:
