@@ -106,7 +106,7 @@ class PersonalinfoViewController: UIViewController {
             
             let destination : ChoosestoreViewController = segue.destination as! ChoosestoreViewController
             destination.registrationInfo = self.registrationInfo
-            
+            destination.fromRegistrationView = true
             break
         default:
             
