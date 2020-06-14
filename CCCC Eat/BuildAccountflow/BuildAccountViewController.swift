@@ -12,41 +12,23 @@ import Alamofire
 class BuildAccountViewController: UIViewController {
 
     @IBOutlet weak var NewAccountEntry: UITextField!
+    
     @IBAction func moveToPersonalinfoSegue(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToPersonalinfoSegue", sender: self)
+        
+        
+        
+        
+        
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        AF.request("https://smartfood.azurewebsites.net/api/ProfileApi/2").responseString(completionHandler: {
-        response
-        in
         
-        switch( response.result ){
-        case let .success(value) :
-        
-            print(value)
-            //print(response.response!.statusCode)
-            
-            // 注意 guard 的使用方法。
-            guard 200 == response.response!.statusCode else {
-                
-                
-                
-                return
-            }
-            
-            
-            break;
-        case let .failure(error) :
-            
-            print(error.localizedDescription)
-            break;
-        }
-        
-        })
     }
     
 

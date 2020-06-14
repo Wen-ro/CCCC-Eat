@@ -12,8 +12,6 @@ class SplashViewController: UIViewController {
     
     var asyncWorker : AsyncRequestWorker = AsyncRequestWorker()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,8 +44,13 @@ class SplashViewController: UIViewController {
 extension SplashViewController : AsyncReponseDelegate {
     func receviedReponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
         
-        
         print(responseString)
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "moveToAccountSelectionSegue", sender: self)
+        }
+        
+        
     }
     
     func receivedErrorMessage(_ sender: AsyncRequestWorker, errorString: String, tag: Int) {
