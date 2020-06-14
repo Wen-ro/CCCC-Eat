@@ -30,7 +30,18 @@ class PersonalinfoViewController: UIViewController {
     
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
         
-        self.registrationInfo.userGender = infoPicker.selectedRow(inComponent: 0) % 2 == 0 ? .Male : .Female
+        var profile : Profile = Profile()
+        
+        profile.name = self.InfoEntry.text ?? "N/A"
+        
+        if infoPicker.selectedRow(inComponent: 0) % 2 == 0  {
+            self.registrationInfo.userGender = .Male
+            profile.gender = "男"
+        }
+        else{
+            self.registrationInfo.userGender = .Female
+            profile.gender = "女"
+        }
         
         
         switch workingTypePicker.selectedRow(inComponent: 0) {
@@ -52,10 +63,28 @@ class PersonalinfoViewController: UIViewController {
         self.registrationInfo.userName = self.InfoEntry.text!
         let age : Int = Int( self.AgeInput.text! ) ?? 18
         self.registrationInfo.userAge = age
+        
         let height : Float = Float( self.HeightInput.text! ) ?? 170.0
         self.registrationInfo.userHeight = height
+        profile.height = Int( height )
+        
         let weight : Float = Float( self.WeightInput.text! ) ?? 55.0
         self.registrationInfo.userWeight = weight
+        profile.weight = Int( weight )
+        
+        
+        
+
+        //
+        let jsonEncoder = JSONEncoder()
+        let profileJsonData = try! jsonEncoder.encode(profile)
+        
+        var urlRequest = URLRequest(url: URL(string: "https://supershop.azurewebsites.net/api/ProfileApi")!)
+        urlRequest.httpBody = profileJsonData
+        urlRequest.method = .post
+        urlRequest.headers.add( HTTPHeader(name: "Content-Type", value: "application/json"))
+        
+        
         
         self.performSegue(withIdentifier: "moveToChoosestoreSegue2", sender: self)
     }
@@ -69,34 +98,6 @@ class PersonalinfoViewController: UIViewController {
         self.genderContainerView.layer.cornerRadius = 20
         self.workingTypeContainerView.layer.cornerRadius = 20
         //
-
-        AF.request("https://smartfood.azurewebsites.net/api/ProfileApi/2").responseString(completionHandler: {
-        response
-        in
-        
-        switch( response.result ){
-        case let .success(value) :
-        
-            print(value)
-            //print(response.response!.statusCode)
-            
-            // 注意 guard 的使用方法。
-            guard 200 == response.response!.statusCode else {
-                
-                
-                
-                return
-            }
-            
-            
-            break;
-        case let .failure(error) :
-            
-            print(error.localizedDescription)
-            break;
-        }
-        
-        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

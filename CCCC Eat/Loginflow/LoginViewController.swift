@@ -36,15 +36,15 @@ class LoginViewController: UIViewController {
                     
                     let json = try JSON(data: dataFromString)
                     
-                    AppDelegate.currentUserProfile = Profile()
+                    AppDelegate.currentUserProfile = DisplayProfile()
                     
                     AppDelegate.currentUserProfile.id = json["id"].intValue
                     AppDelegate.currentUserProfile.name = json["name"].stringValue
-                    AppDelegate.currentUserProfile.birthday = json["birthday"].stringValue
+                    let birthdayString = json["birthday"].stringValue
                     
                     let formatter: DateFormatter = DateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-                    let birthday = formatter.date(from: AppDelegate.currentUserProfile.birthday )!
+                    let birthday = formatter.date(from: birthdayString )!
                     let today = Date()
                     
                     let calendar = Calendar.current
