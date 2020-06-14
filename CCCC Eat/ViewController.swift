@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+           let tabBarIndex = tabBarController.selectedIndex
+           if tabBarIndex == 0 {
+               //do your stuff
+           }
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()

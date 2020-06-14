@@ -37,7 +37,7 @@ class MenuViewController : UIViewController {
                 
                 //print(json)
                 
-                for (index,subJson):(String, JSON) in json {
+                for (_,subJson):(String, JSON) in json {
                     // Do something you want
                     
                     
