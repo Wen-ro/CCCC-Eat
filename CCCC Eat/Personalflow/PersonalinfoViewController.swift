@@ -11,16 +11,52 @@ import Alamofire
 
 class PersonalinfoViewController: UIViewController {
     
+    @IBOutlet weak var genderContainerView: UIView!
+    @IBOutlet weak var workingTypeContainerView: UIView!
+    @IBOutlet weak var WeightInput: UITextField!
+    @IBOutlet weak var HeightInput: UITextField!
+    @IBOutlet weak var AgeInput: UITextField!
+    
     @IBOutlet weak var InfoEntry: UITextField!
     @IBOutlet weak var selectinfo: UILabel!
     @IBOutlet weak var infoPicker: UIPickerView!
     
+    @IBOutlet weak var workingTypePicker: UIPickerView!
+    
     var genders : [String] = ["男", "女"]
     var jobs : [String] = ["輕度工作", "中度工作", "重度工作"]
     
-    var registrationInfo : Registration?
+    var registrationInfo : Registration = Registration()
     
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
+        
+        self.registrationInfo.userGender = infoPicker.selectedRow(inComponent: 0) % 2 == 0 ? .Male : .Female
+        
+        
+        switch workingTypePicker.selectedRow(inComponent: 0) {
+        case 0:
+            self.registrationInfo.userWorkingType = .Light
+            break
+        case 1:
+            self.registrationInfo.userWorkingType = .Medium
+            break
+        case 2:
+            self.registrationInfo.userWorkingType = .Heavy
+            break
+        default:
+            
+            break
+        }
+        
+        // 這邊停下來檢查，需要輸入的值在不在。
+        self.registrationInfo.userName = self.InfoEntry.text!
+        let age : Int = Int( self.AgeInput.text! ) ?? 18
+        self.registrationInfo.userAge = age
+        let height : Float = Float( self.HeightInput.text! ) ?? 170.0
+        self.registrationInfo.userHeight = height
+        let weight : Float = Float( self.WeightInput.text! ) ?? 55.0
+        self.registrationInfo.userWeight = weight
+        
         self.performSegue(withIdentifier: "moveToChoosestoreSegue2", sender: self)
     }
     
@@ -30,8 +66,10 @@ class PersonalinfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         //
-        self.registrationInfo = Registration(userGender: .Male, userAge: .age, userWorkingType: .Light, userName: .name, userHeight: .h, userWeight: .w)
-        
+        self.genderContainerView.layer.cornerRadius = 20
+        self.workingTypeContainerView.layer.cornerRadius = 20
+        //
+
         AF.request("https://smartfood.azurewebsites.net/api/ProfileApi/2").responseString(completionHandler: {
         response
         in
@@ -67,7 +105,6 @@ class PersonalinfoViewController: UIViewController {
         case "moveToChoosestoreSegue2":
             
             let destination : ChoosestoreViewController = segue.destination as! ChoosestoreViewController
-            
             destination.registrationInfo = self.registrationInfo
             
             break
@@ -93,10 +130,37 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
         print("按下Return")
         //print 出自輸入的值
         print(textField.text ?? "")
-        self.registrationInfo?.userName = .name
-        self.registrationInfo?.userAge = .age
-        self.registrationInfo?.userHeight = .h
-        self.registrationInfo?.userWeight = .w
+        
+
+        // 去 Storyboard 屬性設定下，看 tag 的設定
+        switch textField.tag {
+        case 101:
+            self.registrationInfo.userName = textField.text!
+            break
+        case 102:
+            let age : Int = Int( textField.text! ) ?? 18
+            self.registrationInfo.userAge = age
+            break
+        case 103:
+            let height : Float = Float( textField.text! ) ?? 170.0
+            self.registrationInfo.userHeight = height
+            break
+        case 104:
+            let weight : Float = Float( textField.text! ) ?? 55.0
+            self.registrationInfo.userWeight = weight
+            break
+        default:
+            
+            break
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         return true
     }
     
@@ -138,7 +202,7 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
             let gender = genders[row]
             print(gender)
             
-            self.registrationInfo?.userGender = row % 2 == 0 ? .Male : .Female
+            self.registrationInfo.userGender = row % 2 == 0 ? .Male : .Female
             
         if( 102 == pickerView.tag ){
             let job = jobs[row]
@@ -146,13 +210,13 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
             
             switch row {
             case 0:
-                self.registrationInfo?.userWorkingType = .Light
+                self.registrationInfo.userWorkingType = .Light
                 break
             case 1:
-                self.registrationInfo?.userWorkingType = .Medium
+                self.registrationInfo.userWorkingType = .Medium
                 break
             case 2:
-                self.registrationInfo?.userWorkingType = .Heavy
+                self.registrationInfo.userWorkingType = .Heavy
                 break
             default:
                 

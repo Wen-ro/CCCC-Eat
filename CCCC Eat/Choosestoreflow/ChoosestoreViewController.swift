@@ -15,7 +15,7 @@ class ChoosestoreViewController: UIViewController {
         self.performSegue(withIdentifier: "moveToMenu", sender: self)
     }
 
-    var registrationInfo : Registration?
+    var registrationInfo : Registration!
     
     @IBOutlet weak var GenderLabel: UILabel!
     @IBOutlet weak var AgeLabel: UILabel!
@@ -25,11 +25,11 @@ class ChoosestoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GenderLabel.text = "\(String(describing: registrationInfo?.userGender))"
-        AgeLabel.text = "\(String(describing: registrationInfo?.userAge))"
-        WorkLabel.text = (registrationInfo?.userWorkingType).map { $0.rawValue }
-        HeightLabel.text = "\(String(describing: registrationInfo?.userHeight))"
-        WeightLabel.text = "\(String(describing: registrationInfo?.userWeight))"
+        GenderLabel.text = self.registrationInfo.userGender.rawValue
+        AgeLabel.text =  "\( self.registrationInfo.userAge )"
+        WorkLabel.text = self.registrationInfo.userWorkingType.rawValue
+        HeightLabel.text = "\( self.registrationInfo.userHeight )"
+        WeightLabel.text = "\( self.registrationInfo.userWeight )"
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         

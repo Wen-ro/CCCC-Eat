@@ -35,7 +35,9 @@
 		04A41C94248F948F00376EAC /* MealSetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C93248F948F00376EAC /* MealSetViewCell.swift */; };
 		7565F984366D90FD69CD07F5 /* Pods_CCCC_Eat_CCCC_EatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB624AA0ABC5BD4F7D74385B /* Pods_CCCC_Eat_CCCC_EatUITests.framework */; };
 		8B1F583E2494F348007B7B46 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F583D2494F347007B7B46 /* Profile.swift */; };
-		8B1F58402494F7FA007B7B46 /* WorkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F583F2494F7FA007B7B46 /* WorkingType.swift */; };
+		8BDDDE8A2495C1A10013AC7B /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDDE892495C1A10013AC7B /* Registration.swift */; };
+		8BDDDE8B2495C1A10013AC7B /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDDE892495C1A10013AC7B /* Registration.swift */; };
+		8BDDDE8C2495C1A10013AC7B /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDDE892495C1A10013AC7B /* Registration.swift */; };
 		D8092EBAC895B207E4232DDC /* Pods_CCCC_Eat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9ACCD4DC7DBA7CAB8A2480 /* Pods_CCCC_Eat.framework */; };
 		F1D0B9379EB78419E692E50E /* Pods_CCCC_EatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845C3C1B40433FBF01AB7DB2 /* Pods_CCCC_EatTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,7 +97,7 @@
 		3E9ACCD4DC7DBA7CAB8A2480 /* Pods_CCCC_Eat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCCC_Eat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845C3C1B40433FBF01AB7DB2 /* Pods_CCCC_EatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCCC_EatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1F583D2494F347007B7B46 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		8B1F583F2494F7FA007B7B46 /* WorkingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingType.swift; sourceTree = "<group>"; };
+		8BDDDE892495C1A10013AC7B /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		8EE2574F8359391E5EE6322C /* Pods-CCCC Eat-CCCC EatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCCC Eat-CCCC EatUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCCC Eat-CCCC EatUITests/Pods-CCCC Eat-CCCC EatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A98C4FF2E71D653DAF6C4D43 /* Pods-CCCC EatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCCC EatTests.release.xcconfig"; path = "Target Support Files/Pods-CCCC EatTests/Pods-CCCC EatTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFF5F0975EFBAC1692C1AFF9 /* Pods-CCCC Eat-CCCC EatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCCC Eat-CCCC EatUITests.release.xcconfig"; path = "Target Support Files/Pods-CCCC Eat-CCCC EatUITests/Pods-CCCC Eat-CCCC EatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -296,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1F583D2494F347007B7B46 /* Profile.swift */,
-				8B1F583F2494F7FA007B7B46 /* WorkingType.swift */,
+				8BDDDE892495C1A10013AC7B /* Registration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,7 +565,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1F58402494F7FA007B7B46 /* WorkingType.swift in Sources */,
 				045A32022461765A007ED48E /* ViewController.swift in Sources */,
 				04191D7C248A7CD10013B8F9 /* FirstpageViewController.swift in Sources */,
 				04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */,
@@ -571,6 +572,7 @@
 				04A41C94248F948F00376EAC /* MealSetViewCell.swift in Sources */,
 				04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */,
 				04A41C8E248F7CE300376EAC /* MealSet.swift in Sources */,
+				8BDDDE8A2495C1A10013AC7B /* Registration.swift in Sources */,
 				04A41C77248F5D6300376EAC /* Food.swift in Sources */,
 				04A41C92248F93B800376EAC /* MealSetViewController.swift in Sources */,
 				04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */,
@@ -593,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDDDE8B2495C1A10013AC7B /* Registration.swift in Sources */,
 				045A32152461765E007ED48E /* CCCC_EatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDDDE8C2495C1A10013AC7B /* Registration.swift in Sources */,
 				045A32202461765E007ED48E /* CCCC_EatUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,8 @@ import Alamofire
 
 // MARK: - Profile工作
 struct Profile: Codable {
-    let id: Int
-    let name, gender, birthday: String
-    let height, weight, expectDailyCalorie, expectBreakfastCalorie: Int
-    let expectLunchCalorie, expectDinnerCalorie: Int
+    var id: Int
+    var name, gender, birthday: String
+    var height, weight, expectDailyCalorie, expectBreakfastCalorie: Int
+    var expectLunchCalorie, expectDinnerCalorie: Int
 }
