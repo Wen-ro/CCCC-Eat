@@ -23,7 +23,7 @@ class StoreViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateContent(store : MealSet) {
+    func updateContent(store : TypeSet) {
         self.titleLabel.text = store.name
     }
 

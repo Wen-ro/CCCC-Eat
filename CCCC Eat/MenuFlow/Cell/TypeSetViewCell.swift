@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealSetViewCell: UITableViewCell {
+class TypeSetViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -23,7 +23,7 @@ class MealSetViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateContent(meal : MealSet) {
+    func updateContent(meal : TypeSet) {
         self.titleLabel.text = meal.name
     }
 

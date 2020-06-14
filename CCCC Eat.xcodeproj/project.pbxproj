@@ -29,10 +29,10 @@
 		04A41C75248F591300376EAC /* RecommendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C74248F591300376EAC /* RecommendViewCell.swift */; };
 		04A41C77248F5D6300376EAC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C76248F5D6300376EAC /* Food.swift */; };
 		04A41C79248F60FF00376EAC /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C78248F60FF00376EAC /* FoodDetailViewController.swift */; };
-		04A41C8E248F7CE300376EAC /* MealSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C8D248F7CE300376EAC /* MealSet.swift */; };
+		04A41C8E248F7CE300376EAC /* TypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C8D248F7CE300376EAC /* TypeSet.swift */; };
 		04A41C90248F7E2900376EAC /* StoreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C8F248F7E2900376EAC /* StoreViewCell.swift */; };
-		04A41C92248F93B800376EAC /* MealSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C91248F93B800376EAC /* MealSetViewController.swift */; };
-		04A41C94248F948F00376EAC /* MealSetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C93248F948F00376EAC /* MealSetViewCell.swift */; };
+		04A41C92248F93B800376EAC /* TypeSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C91248F93B800376EAC /* TypeSetViewController.swift */; };
+		04A41C94248F948F00376EAC /* TypeSetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A41C93248F948F00376EAC /* TypeSetViewCell.swift */; };
 		7565F984366D90FD69CD07F5 /* Pods_CCCC_Eat_CCCC_EatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB624AA0ABC5BD4F7D74385B /* Pods_CCCC_Eat_CCCC_EatUITests.framework */; };
 		8B1F583E2494F348007B7B46 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F583D2494F347007B7B46 /* Profile.swift */; };
 		8BDDDE8A2495C1A10013AC7B /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDDE892495C1A10013AC7B /* Registration.swift */; };
@@ -89,10 +89,10 @@
 		04A41C74248F591300376EAC /* RecommendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewCell.swift; sourceTree = "<group>"; };
 		04A41C76248F5D6300376EAC /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		04A41C78248F60FF00376EAC /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
-		04A41C8D248F7CE300376EAC /* MealSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSet.swift; sourceTree = "<group>"; };
+		04A41C8D248F7CE300376EAC /* TypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSet.swift; sourceTree = "<group>"; };
 		04A41C8F248F7E2900376EAC /* StoreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewCell.swift; sourceTree = "<group>"; };
-		04A41C91248F93B800376EAC /* MealSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSetViewController.swift; sourceTree = "<group>"; };
-		04A41C93248F948F00376EAC /* MealSetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSetViewCell.swift; sourceTree = "<group>"; };
+		04A41C91248F93B800376EAC /* TypeSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSetViewController.swift; sourceTree = "<group>"; };
+		04A41C93248F948F00376EAC /* TypeSetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSetViewCell.swift; sourceTree = "<group>"; };
 		24F209840CB0E22051F4B34D /* Pods-CCCC EatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCCC EatTests.debug.xcconfig"; path = "Target Support Files/Pods-CCCC EatTests/Pods-CCCC EatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E9ACCD4DC7DBA7CAB8A2480 /* Pods_CCCC_Eat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCCC_Eat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845C3C1B40433FBF01AB7DB2 /* Pods_CCCC_EatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCCC_EatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,9 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				04A41C73248F58D300376EAC /* Cell */,
-				04A41C8D248F7CE300376EAC /* MealSet.swift */,
+				04A41C8D248F7CE300376EAC /* TypeSet.swift */,
 				04A41C76248F5D6300376EAC /* Food.swift */,
-				04A41C91248F93B800376EAC /* MealSetViewController.swift */,
+				04A41C91248F93B800376EAC /* TypeSetViewController.swift */,
 				04401D1E246A7FF0003E33C7 /* MenuViewController.swift */,
 				04A41C78248F60FF00376EAC /* FoodDetailViewController.swift */,
 			);
@@ -288,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				04A41C8F248F7E2900376EAC /* StoreViewCell.swift */,
-				04A41C93248F948F00376EAC /* MealSetViewCell.swift */,
+				04A41C93248F948F00376EAC /* TypeSetViewCell.swift */,
 				04A41C74248F591300376EAC /* RecommendViewCell.swift */,
 			);
 			path = Cell;
@@ -569,12 +569,12 @@
 				04191D7C248A7CD10013B8F9 /* FirstpageViewController.swift in Sources */,
 				04401D0C246A7CCC003E33C7 /* DashboardViewController.swift in Sources */,
 				04A41C79248F60FF00376EAC /* FoodDetailViewController.swift in Sources */,
-				04A41C94248F948F00376EAC /* MealSetViewCell.swift in Sources */,
+				04A41C94248F948F00376EAC /* TypeSetViewCell.swift in Sources */,
 				04401D1A246A7F71003E33C7 /* SocialViewController.swift in Sources */,
-				04A41C8E248F7CE300376EAC /* MealSet.swift in Sources */,
+				04A41C8E248F7CE300376EAC /* TypeSet.swift in Sources */,
 				8BDDDE8A2495C1A10013AC7B /* Registration.swift in Sources */,
 				04A41C77248F5D6300376EAC /* Food.swift in Sources */,
-				04A41C92248F93B800376EAC /* MealSetViewController.swift in Sources */,
+				04A41C92248F93B800376EAC /* TypeSetViewController.swift in Sources */,
 				04401D22246A8C9B003E33C7 /* AsyncRequestWorker.swift in Sources */,
 				04401D1C246A7F80003E33C7 /* HistoryViewController.swift in Sources */,
 				045A31FE2461765A007ED48E /* AppDelegate.swift in Sources */,
