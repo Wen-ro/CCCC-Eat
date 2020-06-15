@@ -95,10 +95,10 @@ class ChoosestoreViewController: UIViewController {
         let expectFat : Float = ( expectCalorie * 20) / 900
         
         //
-        TotalCalLabel.text = "\(expectCalorie) 大卡"
-        CarbohydrateLabel.text = "\(expectCarbohydrate) g"
-        ProteinLabel.text = "\(expectProtein) g"
-        FatLabel.text = "\(expectFat) g"
+        TotalCalLabel.text = "\(expectCalorie.rounded()) 大卡"
+        CarbohydrateLabel.text = "\(expectCarbohydrate.rounded()) g"
+        ProteinLabel.text = "\(expectProtein.rounded()) g"
+        FatLabel.text = "\(expectFat.rounded()) g"
         
         
         /*

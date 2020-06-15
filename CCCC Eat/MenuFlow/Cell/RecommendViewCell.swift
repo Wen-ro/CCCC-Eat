@@ -23,7 +23,7 @@ class RecommendViewCell: UITableViewCell {
     
     func updateContent(food : Food) {
         self.titleLabel.text = food.name
-        self.descriptionLabel.text = ""
+        self.descriptionLabel.text = "NT$ \(food.price)"
     }
 
 }
