@@ -12,6 +12,8 @@ class Profile : Codable {
     
     var id: Int = 0
     var name : String = "N/A"
+    var nickName : String = "N/A"
+    var password : String = "N/A"
     var gender: String = "N/A"
     var birthday: String = "N/A"
     var height : Int = 0
@@ -21,6 +23,7 @@ class Profile : Codable {
     var expectBreakfastCalorie : Int = 0
     var expectLunchCalorie : Int = 0
     var expectDinnerCalorie: Int = 0
+    
     var userWorkingType : Int = 0
     
 }

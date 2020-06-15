@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                     AppDelegate.currentUserProfile = DisplayProfile()
                     
                     AppDelegate.currentUserProfile.id = json["id"].intValue
-                    AppDelegate.currentUserProfile.name = json["name"].stringValue
+                    AppDelegate.currentUserProfile.nickName = json["name"].stringValue
                     let birthdayString = json["birthday"].stringValue
                     
                     let formatter: DateFormatter = DateFormatter()

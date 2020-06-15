@@ -17,17 +17,37 @@ class BuildAccountViewController: UIViewController {
         
 
         guard let account : String = self.accountEntry.text else {
+            
+            self.showToast(message: "請填寫帳號", font: .systemFont(ofSize: 14))
             self.accountEntry.becomeFirstResponder()
+            
+            return
+        }
+        let trimaccount : String = account.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimaccount.count == 0 {
+            self.showToast(message: "帳號不能使用空白字元", font: .systemFont(ofSize: 14))
+            self.accountEntry.becomeFirstResponder()
+            
             return
         }
         
         guard let password : String = self.passwordEntry.text else {
+            
+            self.showToast(message: "密碼不能為空", font: .systemFont(ofSize: 14))
             self.passwordEntry.becomeFirstResponder()
+            
+            return
+        }
+        let trimpassword : String = password.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimpassword.count == 0 {
+            self.showToast(message: "密碼不能使用空白字元", font: .systemFont(ofSize: 14))
+            self.passwordEntry.becomeFirstResponder()
+            
             return
         }
         
-        AppDelegate.currentUserProfile.account = account
-        AppDelegate.currentUserProfile.password = password
+        AppDelegate.currentUserProfile.account = trimaccount
+        AppDelegate.currentUserProfile.password = trimpassword
         
         self.performSegue(withIdentifier: "moveToPersonalinfoSegue", sender: self)
     }

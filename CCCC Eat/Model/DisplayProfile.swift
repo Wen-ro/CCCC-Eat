@@ -7,17 +7,14 @@
 //
 
 import Foundation
-import Alamofire
 
-
-// MARK: - Profile工作
 class DisplayProfile {
-    var id: Int = 0
     
+    var id: Int = 0
     var account : String = "N/A"
-    var name : String = "N/A"
+    var nickName : String = "N/A"
     var password : String = "N/A"
-
+    var userGender : Gender = Gender.Female
     var age : Int = 0
     var height : Float = 0
     var weight : Float = 0
@@ -27,7 +24,6 @@ class DisplayProfile {
     var expectLunchCalorie : Int = 0
     var expectDinnerCalorie: Int = 0
     
-    var userGender : Gender = Gender.Female
     var userWorkingType : WorkingType = WorkingType.Light
     
 }

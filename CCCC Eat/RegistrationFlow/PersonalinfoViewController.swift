@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class PersonalinfoViewController: UIViewController {
     
@@ -27,13 +28,48 @@ class PersonalinfoViewController: UIViewController {
     var genders : [String] = ["男", "女"]
     var jobs : [String] = ["輕度工作", "中度工作", "重度工作"]
     
-    
-    
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
+        
+        guard let age : Int = Int( self.AgeEntry.text! ) else {
+            self.showToast(message: "請填寫年齡", font: .systemFont(ofSize: 14))
+            
+            DispatchQueue.main.async {
+                self.AgeEntry.becomeFirstResponder()
+            }
+            return
+        }
+        
+        guard let nickName : String = self.NickNameEntry.text else {
+            self.showToast(message: "請填寫暱稱", font: .systemFont(ofSize: 14))
+            
+            DispatchQueue.main.async {
+                self.NickNameEntry.becomeFirstResponder()
+            }
+            return
+        }
+        
+        guard let height : Float = Float( self.HeightEntry.text! ) else {
+           self.showToast(message: "請填寫身高", font: .systemFont(ofSize: 14))
+           
+           DispatchQueue.main.async {
+               self.HeightEntry.becomeFirstResponder()
+           }
+           return
+        }
+        
+        guard let weight : Float = Float( self.WeightEntry.text! ) else {
+            self.showToast(message: "請填寫體重", font: .systemFont(ofSize: 14))
+
+            DispatchQueue.main.async {
+                self.WeightEntry.becomeFirstResponder()
+            }
+            return
+        }
+        
         
         let profile : Profile = Profile()
         
-        profile.name = self.NickNameEntry.text ?? "N/A"
+        profile.nickName = self.NickNameEntry.text ?? "N/A"
         
         if infoPicker.selectedRow(inComponent: 0) % 2 == 0  {
             AppDelegate.currentUserProfile.userGender = .Male
@@ -48,12 +84,15 @@ class PersonalinfoViewController: UIViewController {
         switch workingTypePicker.selectedRow(inComponent: 0) {
         case 0:
             AppDelegate.currentUserProfile.userWorkingType = .Light
+            profile.userWorkingType = 0
             break
         case 1:
             AppDelegate.currentUserProfile.userWorkingType = .Medium
+            profile.userWorkingType = 1
             break
         case 2:
             AppDelegate.currentUserProfile.userWorkingType = .Heavy
+            profile.userWorkingType = 2
             break
         default:
             
@@ -61,34 +100,62 @@ class PersonalinfoViewController: UIViewController {
         }
         
         // 這邊停下來檢查，需要輸入的值在不在。
-        AppDelegate.currentUserProfile.name = self.NickNameEntry.text!
-        
-        let age : Int = Int( self.AgeEntry.text! ) ?? 18
+        AppDelegate.currentUserProfile.nickName = nickName
         AppDelegate.currentUserProfile.age = age
-        
-        let height : Float = Float( self.HeightEntry.text! ) ?? 170.0
         AppDelegate.currentUserProfile.height = height
-        profile.height = Int( height )
-        
-        let weight : Float = Float( self.WeightEntry.text! ) ?? 55.0
         AppDelegate.currentUserProfile.weight = weight
+        
+        //
+        let date = Date()
+        guard let birthdayDate = Calendar.current.date(byAdding: .year, value: (age * -1), to: date) else { return  }
+        
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        profile.birthday = format.string(from: birthdayDate)
+        
+        //
+        profile.height = Int( height )
         profile.weight = Int( weight )
-        
-        
+        profile.name = AppDelegate.currentUserProfile.account
+        profile.password = AppDelegate.currentUserProfile.password
+        profile.expectDailyCalorie = 0
+        profile.expectBreakfastCalorie = 0
+        profile.expectLunchCalorie = 0
+        profile.expectDinnerCalorie = 0
         
 
-        //
+        // 這邊將註冊的資料，轉為 JSON 之後上傳 Server
         let jsonEncoder = JSONEncoder()
         let profileJsonData = try! jsonEncoder.encode(profile)
         
-        var urlRequest = URLRequest(url: URL(string: "https://supershop.azurewebsites.net/api/ProfileApi")!)
+        var urlRequest = URLRequest(url: URL(string: "https://smartfood.azurewebsites.net/api/ProfileApi")!)
         urlRequest.httpBody = profileJsonData
         urlRequest.method = .post
         urlRequest.headers.add( HTTPHeader(name: "Content-Type", value: "application/json"))
         
         
-        
-        self.performSegue(withIdentifier: "moveToChoosestoreSegue2", sender: self)
+        AF.request( urlRequest ).responseJSON(completionHandler: {
+            response
+            in
+            
+            switch( response.result ){
+                case let .success(value) :
+                    
+                    print(value)
+                    
+                    // 成功後，跳轉至主頁面。
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "moveToChoosestoreSegue2", sender: self)
+                    }
+                    
+                break
+                case let .failure(error) :
+                    print(error.localizedDescription)
+                break
+                
+            }
+            
+        })
     }
     
     
@@ -117,6 +184,7 @@ class PersonalinfoViewController: UIViewController {
     }
 
 }
+
 extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     
     func dismissKeyboard() {
@@ -137,7 +205,7 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
         // 去 Storyboard 屬性設定下，看 tag 的設定
         switch textField.tag {
         case 101:
-            AppDelegate.currentUserProfile.name = textField.text!
+            AppDelegate.currentUserProfile.nickName = textField.text!
             break
         case 102:
             let age : Int = Int( textField.text! ) ?? 18
@@ -230,4 +298,26 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
     }
 }
 }
+
+
+extension UIViewController {
+
+func showToast(message : String, font: UIFont) {
+
+    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+    toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    toastLabel.textColor = UIColor.white
+    toastLabel.font = font
+    toastLabel.textAlignment = .center;
+    toastLabel.text = message
+    toastLabel.alpha = 1.0
+    toastLabel.layer.cornerRadius = 10;
+    toastLabel.clipsToBounds  =  true
+    self.view.addSubview(toastLabel)
+    UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+         toastLabel.alpha = 0.0
+    }, completion: {(isCompleted) in
+        toastLabel.removeFromSuperview()
+    })
+} }
 
