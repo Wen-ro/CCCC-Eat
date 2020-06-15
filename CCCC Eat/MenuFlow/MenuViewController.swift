@@ -43,6 +43,7 @@ class MenuViewController : UIViewController {
                     
                     let name : String = subJson["name"].stringValue
                     let price : Double = subJson["price"].doubleValue
+                
                     
                     print("\( name ): \( price )")
                     
