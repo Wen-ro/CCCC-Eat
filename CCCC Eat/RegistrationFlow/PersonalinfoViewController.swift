@@ -13,11 +13,12 @@ class PersonalinfoViewController: UIViewController {
     
     @IBOutlet weak var genderContainerView: UIView!
     @IBOutlet weak var workingTypeContainerView: UIView!
-    @IBOutlet weak var WeightInput: UITextField!
-    @IBOutlet weak var HeightInput: UITextField!
-    @IBOutlet weak var AgeInput: UITextField!
+    @IBOutlet weak var WeightEntry: UITextField!
+    @IBOutlet weak var HeightEntry: UITextField!
+    @IBOutlet weak var AgeEntry: UITextField!
     
-    @IBOutlet weak var InfoEntry: UITextField!
+    @IBOutlet weak var NickNameEntry: UITextField!
+    
     @IBOutlet weak var selectinfo: UILabel!
     @IBOutlet weak var infoPicker: UIPickerView!
     
@@ -32,7 +33,7 @@ class PersonalinfoViewController: UIViewController {
         
         let profile : Profile = Profile()
         
-        profile.name = self.InfoEntry.text ?? "N/A"
+        profile.name = self.NickNameEntry.text ?? "N/A"
         
         if infoPicker.selectedRow(inComponent: 0) % 2 == 0  {
             AppDelegate.currentUserProfile.userGender = .Male
@@ -60,16 +61,16 @@ class PersonalinfoViewController: UIViewController {
         }
         
         // 這邊停下來檢查，需要輸入的值在不在。
-        AppDelegate.currentUserProfile.name = self.InfoEntry.text!
+        AppDelegate.currentUserProfile.name = self.NickNameEntry.text!
         
-        let age : Int = Int( self.AgeInput.text! ) ?? 18
+        let age : Int = Int( self.AgeEntry.text! ) ?? 18
         AppDelegate.currentUserProfile.age = age
         
-        let height : Float = Float( self.HeightInput.text! ) ?? 170.0
+        let height : Float = Float( self.HeightEntry.text! ) ?? 170.0
         AppDelegate.currentUserProfile.height = height
         profile.height = Int( height )
         
-        let weight : Float = Float( self.WeightInput.text! ) ?? 55.0
+        let weight : Float = Float( self.WeightEntry.text! ) ?? 55.0
         AppDelegate.currentUserProfile.weight = weight
         profile.weight = Int( weight )
         

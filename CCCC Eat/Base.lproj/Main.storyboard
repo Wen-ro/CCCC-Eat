@@ -315,10 +315,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uus-za-zoF"/>
                     <connections>
-                        <outlet property="AgeInput" destination="2FH-Lj-r0T" id="K4A-BD-T0X"/>
-                        <outlet property="HeightInput" destination="Tn8-Xu-9ia" id="gbD-Hj-Svu"/>
-                        <outlet property="InfoEntry" destination="yXg-CJ-xHZ" id="3IN-kO-HnX"/>
-                        <outlet property="WeightInput" destination="mMm-tN-f6C" id="yFE-p4-DqL"/>
+                        <outlet property="AgeEntry" destination="2FH-Lj-r0T" id="K4A-BD-T0X"/>
+                        <outlet property="HeightEntry" destination="Tn8-Xu-9ia" id="gbD-Hj-Svu"/>
+                        <outlet property="NickNameEntry" destination="yXg-CJ-xHZ" id="3IN-kO-HnX"/>
+                        <outlet property="WeightEntry" destination="mMm-tN-f6C" id="yFE-p4-DqL"/>
                         <outlet property="genderContainerView" destination="Udy-HK-dsQ" id="CbZ-KS-gvJ"/>
                         <outlet property="infoPicker" destination="zKZ-BP-ZOb" id="na0-CB-Fb9"/>
                         <outlet property="selectinfo" destination="0lp-Yw-mYz" id="cR9-sR-HgI"/>
@@ -814,7 +814,7 @@
                                 <color key="textColor" red="0.52549019610000003" green="0.73333333329999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請填寫帳號" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="entry" translatesAutoresizingMaskIntoConstraints="NO" id="3mq-j7-tie">
+                            <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請填寫帳號" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="entry" translatesAutoresizingMaskIntoConstraints="NO" id="3mq-j7-tie">
                                 <rect key="frame" x="34.5" y="249" width="345" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="EHe-RU-tKw"/>
@@ -823,12 +823,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6GB-3R-0MH" id="z5q-ca-5Ew"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請填寫密碼" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="entry" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-Gt-X6X">
+                            <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請填寫密碼" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="entry" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-Gt-X6X">
                                 <rect key="frame" x="34.5" y="349" width="345" height="90"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6GB-3R-0MH" id="VZD-wG-eB2"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-HB-1sx">
                                 <rect key="frame" x="57" y="539" width="300" height="90"/>

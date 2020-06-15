@@ -26,11 +26,30 @@ class BuildAccountViewController: UIViewController {
             return
         }
         
-        print("HERE\(account):\(password)")
-        
         AppDelegate.currentUserProfile.account = account
         AppDelegate.currentUserProfile.password = password
         
         self.performSegue(withIdentifier: "moveToPersonalinfoSegue", sender: self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+}
+
+extension BuildAccountViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if 101 == textField.tag {
+            self.passwordEntry.becomeFirstResponder()
+        }
+        else{
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
