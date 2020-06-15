@@ -24,9 +24,15 @@ class ChoosestoreViewController: UIViewController {
     @IBOutlet weak var HeightLabel: UILabel!
     @IBOutlet weak var WeightLabel: UILabel!
     
+    @IBOutlet weak var TotalCalLabel: UILabel!
+    @IBOutlet weak var CarbohydrateLabel: UILabel!
+    @IBOutlet weak var ProteinLabel: UILabel!
+    @IBOutlet weak var FatLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if fromRegistrationView {
             GenderLabel.text = self.registrationInfo.userGender.rawValue
             AgeLabel.text =  "\( self.registrationInfo.userAge )"
@@ -76,8 +82,29 @@ class ChoosestoreViewController: UIViewController {
             print(error.localizedDescription)
             break;
         }
-        
+            
         })
+        /*
+        let idealweight = (Float( HeightLabel.text! ?? 170 ) - 100)*0.9
+        if WorkLabel.text == "輕度" {
+            TotalCalLabel.text = "\(idealweight * 25)"
+            CarbohydrateLabel.text = (Float(TotalCalLabel.text) * 0.65) % 4
+            ProteinLabel.text = (Float(TotalCalLabel.text) * 0.15) % 4
+            FatLabel.text = (Float(TotalCalLabel.text) * 0.2) % 9
+        }
+        if WorkLabel.text == "中度" {
+            TotalCalLabel.text = "\(idealweight * 30)"
+            CarbohydrateLabel.text = (Float(TotalCalLabel.text) * 0.65) % 4
+            ProteinLabel.text = (Float(TotalCalLabel.text) * 0.15) % 4
+            FatLabel.text = (Float(TotalCalLabel.text) * 0.2) % 9
+        }
+        if WorkLabel.text == "重度" {
+            TotalCalLabel.text = "\(idealweight * 35)"
+            CarbohydrateLabel.text = (Float(TotalCalLabel.text) * 0.65) % 4
+            ProteinLabel.text = (Float(TotalCalLabel.text) * 0.15) % 4
+            FatLabel.text = (Float(TotalCalLabel.text) * 0.2) % 9
+        }
+        */
     }
     
 
