@@ -13,13 +13,16 @@ class FoodDetailViewController: UIViewController {
     var selectedFood : Food?
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var FoodFigureImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         titleLabel.text = self.selectedFood?.name
     }
+    
+    
     
 
     /*
@@ -33,3 +36,4 @@ class FoodDetailViewController: UIViewController {
     */
 
 }
+

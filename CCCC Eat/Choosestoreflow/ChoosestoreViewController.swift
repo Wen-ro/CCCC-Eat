@@ -31,10 +31,10 @@ class ChoosestoreViewController: UIViewController {
         super.viewDidLoad()
 
         GenderLabel.text = AppDelegate.currentUserProfile.userGender.rawValue
-        AgeLabel.text =  "\( AppDelegate.currentUserProfile.age )"
+        AgeLabel.text =  "\( AppDelegate.currentUserProfile.age ) 歲"
         WorkLabel.text = AppDelegate.currentUserProfile.userWorkingType.rawValue
-        HeightLabel.text = "\( AppDelegate.currentUserProfile.height )"
-        WeightLabel.text = "\( AppDelegate.currentUserProfile.weight )"
+        HeightLabel.text = "\( AppDelegate.currentUserProfile.height ) 公分"
+        WeightLabel.text = "\( AppDelegate.currentUserProfile.weight ) 公斤"
         
 
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
@@ -95,10 +95,10 @@ class ChoosestoreViewController: UIViewController {
         let expectFat : Float = ( expectCalorie * 20) / 900
         
         //
-        TotalCalLabel.text = "\(expectWeight)"
-        CarbohydrateLabel.text = "\(expectCarbohydrate)"
-        ProteinLabel.text = "\(expectProtein)"
-        FatLabel.text = "\(expectFat)"
+        TotalCalLabel.text = "\(expectCalorie) 大卡"
+        CarbohydrateLabel.text = "\(expectCarbohydrate) g"
+        ProteinLabel.text = "\(expectProtein) g"
+        FatLabel.text = "\(expectFat) g"
         
         
         /*

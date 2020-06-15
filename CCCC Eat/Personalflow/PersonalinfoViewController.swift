@@ -30,7 +30,7 @@ class PersonalinfoViewController: UIViewController {
     
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
         
-        var profile : Profile = Profile()
+        let profile : Profile = Profile()
         
         profile.name = self.InfoEntry.text ?? "N/A"
         
