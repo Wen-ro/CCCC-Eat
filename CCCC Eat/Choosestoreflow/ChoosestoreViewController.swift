@@ -85,7 +85,7 @@ class ChoosestoreViewController: UIViewController {
             
         })
         /*
-        let idealweight = (Float( HeightLabel.text! ?? 170 ) - 100)*0.9
+        let idealweight = (Float( HeightLabel.text! ) - 100)*0.9
         if WorkLabel.text == "輕度" {
             TotalCalLabel.text = "\(idealweight * 25)"
             CarbohydrateLabel.text = (Float(TotalCalLabel.text) * 0.65) % 4
