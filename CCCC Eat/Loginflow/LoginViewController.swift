@@ -54,8 +54,8 @@ class LoginViewController: UIViewController {
                     let components = calendar.dateComponents([.year], from: date1, to: date2)
                     AppDelegate.currentUserProfile.age = components.year!
                     
-                    AppDelegate.currentUserProfile.height = json["height"].intValue
-                    AppDelegate.currentUserProfile.weight = json["weight"].intValue
+                    AppDelegate.currentUserProfile.height = json["height"].floatValue
+                    AppDelegate.currentUserProfile.weight = json["weight"].floatValue
                     AppDelegate.currentUserProfile.expectDailyCalorie = json["expectDailyCalorie"].intValue
                     AppDelegate.currentUserProfile.expectBreakfastCalorie = json["expectBreakfastCalorie"].intValue
                     AppDelegate.currentUserProfile.expectLunchCalorie = json["expectLunchCalorie"].intValue

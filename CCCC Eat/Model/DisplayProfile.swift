@@ -16,8 +16,8 @@ class DisplayProfile {
     var name : String = "N/A"
 
     var age : Int = 0
-    var height : Int = 0
-    var weight : Int = 0
+    var height : Float = 0
+    var weight : Float = 0
     
     var expectDailyCalorie : Int = 0
     var expectBreakfastCalorie : Int = 0

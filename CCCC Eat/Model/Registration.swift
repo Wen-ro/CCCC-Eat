@@ -8,15 +8,6 @@
 
 import UIKit
 
-class Registration: NSObject {
-    var userGender : Gender = Gender.Female
-    var userAge : Int = 18
-    var userWorkingType : WorkingType = WorkingType.Light
-    var userName : String = ""
-    var userHeight : Float = 165
-    var userWeight : Float = 50
-}
-
 // 使用 enum ( enumerate )
 // 例如：性別只有男女、工作型態只有輕中重
 // 這時，使用 enum 可以限制使用行為。

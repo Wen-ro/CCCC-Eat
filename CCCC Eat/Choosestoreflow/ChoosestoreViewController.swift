@@ -14,9 +14,6 @@ class ChoosestoreViewController: UIViewController {
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "moveToMenu", sender: self)
     }
-
-    var registrationInfo : Registration!
-    var fromRegistrationView : Bool = false
     
     @IBOutlet weak var GenderLabel: UILabel!
     @IBOutlet weak var AgeLabel: UILabel!
@@ -33,24 +30,13 @@ class ChoosestoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if fromRegistrationView {
-            GenderLabel.text = self.registrationInfo.userGender.rawValue
-            AgeLabel.text =  "\( self.registrationInfo.userAge )"
-            WorkLabel.text = self.registrationInfo.userWorkingType.rawValue
-            HeightLabel.text = "\( self.registrationInfo.userHeight )"
-            WeightLabel.text = "\( self.registrationInfo.userWeight )"
-        }
-        else{
-            
-            GenderLabel.text = AppDelegate.currentUserProfile.userGender.rawValue
-            AgeLabel.text =  "\( AppDelegate.currentUserProfile.age )"
-            WorkLabel.text = AppDelegate.currentUserProfile.userWorkingType.rawValue
-            HeightLabel.text = "\( AppDelegate.currentUserProfile.height )"
-            WeightLabel.text = "\( AppDelegate.currentUserProfile.weight )"
-        }
+        GenderLabel.text = AppDelegate.currentUserProfile.userGender.rawValue
+        AgeLabel.text =  "\( AppDelegate.currentUserProfile.age )"
+        WorkLabel.text = AppDelegate.currentUserProfile.userWorkingType.rawValue
+        HeightLabel.text = "\( AppDelegate.currentUserProfile.height )"
+        WeightLabel.text = "\( AppDelegate.currentUserProfile.weight )"
         
-        
-        
+
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
         UINavigationBar.appearance().shadowImage = UIImage()
@@ -84,6 +70,37 @@ class ChoosestoreViewController: UIViewController {
         }
             
         })
+        
+        let expectWeight : Float = ( AppDelegate.currentUserProfile.height - 100 ) * 0.9
+        var expectCalorie : Float = 0
+        
+        switch AppDelegate.currentUserProfile.userWorkingType {
+        case .Heavy:
+            expectCalorie = expectWeight * 35
+            
+            break
+        case .Medium:
+            expectCalorie = expectWeight * 30
+            
+            break
+        case .Light:
+            expectCalorie = expectWeight * 25
+            
+            break
+        }
+        
+        // 為了除法，先乘以 100
+        let expectCarbohydrate : Float = ( expectCalorie * 65 ) / 400
+        let expectProtein : Float = ( expectCalorie * 15) / 400
+        let expectFat : Float = ( expectCalorie * 20) / 900
+        
+        //
+        TotalCalLabel.text = "\(expectWeight)"
+        CarbohydrateLabel.text = "\(expectCarbohydrate)"
+        ProteinLabel.text = "\(expectProtein)"
+        FatLabel.text = "\(expectFat)"
+        
+        
         /*
         let idealweight = (Float( HeightLabel.text! ) - 100)*0.9
         if WorkLabel.text == "輕度" {

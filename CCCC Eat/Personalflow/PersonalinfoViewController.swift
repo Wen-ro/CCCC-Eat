@@ -26,7 +26,7 @@ class PersonalinfoViewController: UIViewController {
     var genders : [String] = ["男", "女"]
     var jobs : [String] = ["輕度工作", "中度工作", "重度工作"]
     
-    var registrationInfo : Registration = Registration()
+    
     
     @IBAction func moveToChoosestoreButton(_ sender: Any) {
         
@@ -35,24 +35,24 @@ class PersonalinfoViewController: UIViewController {
         profile.name = self.InfoEntry.text ?? "N/A"
         
         if infoPicker.selectedRow(inComponent: 0) % 2 == 0  {
-            self.registrationInfo.userGender = .Male
+            AppDelegate.currentUserProfile.userGender = .Male
             profile.gender = "男"
         }
         else{
-            self.registrationInfo.userGender = .Female
+            AppDelegate.currentUserProfile.userGender = .Female
             profile.gender = "女"
         }
         
         
         switch workingTypePicker.selectedRow(inComponent: 0) {
         case 0:
-            self.registrationInfo.userWorkingType = .Light
+            AppDelegate.currentUserProfile.userWorkingType = .Light
             break
         case 1:
-            self.registrationInfo.userWorkingType = .Medium
+            AppDelegate.currentUserProfile.userWorkingType = .Medium
             break
         case 2:
-            self.registrationInfo.userWorkingType = .Heavy
+            AppDelegate.currentUserProfile.userWorkingType = .Heavy
             break
         default:
             
@@ -60,16 +60,17 @@ class PersonalinfoViewController: UIViewController {
         }
         
         // 這邊停下來檢查，需要輸入的值在不在。
-        self.registrationInfo.userName = self.InfoEntry.text!
+        AppDelegate.currentUserProfile.name = self.InfoEntry.text!
+        
         let age : Int = Int( self.AgeInput.text! ) ?? 18
-        self.registrationInfo.userAge = age
+        AppDelegate.currentUserProfile.age = age
         
         let height : Float = Float( self.HeightInput.text! ) ?? 170.0
-        self.registrationInfo.userHeight = height
+        AppDelegate.currentUserProfile.height = height
         profile.height = Int( height )
         
         let weight : Float = Float( self.WeightInput.text! ) ?? 55.0
-        self.registrationInfo.userWeight = weight
+        AppDelegate.currentUserProfile.weight = weight
         profile.weight = Int( weight )
         
         
@@ -106,8 +107,7 @@ class PersonalinfoViewController: UIViewController {
         case "moveToChoosestoreSegue2":
             
             let destination : ChoosestoreViewController = segue.destination as! ChoosestoreViewController
-            destination.registrationInfo = self.registrationInfo
-            destination.fromRegistrationView = true
+            
             break
         default:
             
@@ -136,19 +136,19 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
         // 去 Storyboard 屬性設定下，看 tag 的設定
         switch textField.tag {
         case 101:
-            self.registrationInfo.userName = textField.text!
+            AppDelegate.currentUserProfile.name = textField.text!
             break
         case 102:
             let age : Int = Int( textField.text! ) ?? 18
-            self.registrationInfo.userAge = age
+            AppDelegate.currentUserProfile.age = age
             break
         case 103:
             let height : Float = Float( textField.text! ) ?? 170.0
-            self.registrationInfo.userHeight = height
+            AppDelegate.currentUserProfile.height = height
             break
         case 104:
             let weight : Float = Float( textField.text! ) ?? 55.0
-            self.registrationInfo.userWeight = weight
+            AppDelegate.currentUserProfile.weight = weight
             break
         default:
             
@@ -203,7 +203,7 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
             let gender = genders[row]
             print(gender)
             
-            self.registrationInfo.userGender = row % 2 == 0 ? .Male : .Female
+            AppDelegate.currentUserProfile.userGender = row % 2 == 0 ? .Male : .Female
             
         if( 102 == pickerView.tag ){
             let job = jobs[row]
@@ -211,13 +211,13 @@ extension PersonalinfoViewController : UIPickerViewDelegate, UIPickerViewDataSou
             
             switch row {
             case 0:
-                self.registrationInfo.userWorkingType = .Light
+                AppDelegate.currentUserProfile.userWorkingType = .Light
                 break
             case 1:
-                self.registrationInfo.userWorkingType = .Medium
+                AppDelegate.currentUserProfile.userWorkingType = .Medium
                 break
             case 2:
-                self.registrationInfo.userWorkingType = .Heavy
+                AppDelegate.currentUserProfile.userWorkingType = .Heavy
                 break
             default:
                 
