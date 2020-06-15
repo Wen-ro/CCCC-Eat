@@ -44,8 +44,6 @@ class SplashViewController: UIViewController {
 extension SplashViewController : AsyncReponseDelegate {
     func receviedReponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
         
-        print(responseString)
-        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "moveToAccountSelectionSegue", sender: self)
         }

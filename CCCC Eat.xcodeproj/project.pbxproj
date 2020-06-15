@@ -135,14 +135,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040161D2246E892400D58FFC /* BuildAccountflow */ = {
-			isa = PBXGroup;
-			children = (
-				040161D3246E898100D58FFC /* BuildAccountViewController.swift */,
-			);
-			path = BuildAccountflow;
-			sourceTree = "<group>";
-		};
 		04191D7A248A7C710013B8F9 /* Firstpageflow */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,12 +151,13 @@
 			path = Loginflow;
 			sourceTree = "<group>";
 		};
-		04401CFE246A775E003E33C7 /* Personalflow */ = {
+		04401CFE246A775E003E33C7 /* RegistrationFlow */ = {
 			isa = PBXGroup;
 			children = (
+				040161D3246E898100D58FFC /* BuildAccountViewController.swift */,
 				04401D08246A7CA2003E33C7 /* PersonalinfoViewController.swift */,
 			);
-			path = Personalflow;
+			path = RegistrationFlow;
 			sourceTree = "<group>";
 		};
 		04401CFF246A7780003E33C7 /* Choosestoreflow */ = {
@@ -247,11 +240,10 @@
 			children = (
 				8B1F583C2494F330007B7B46 /* Model */,
 				04191D7A248A7C710013B8F9 /* Firstpageflow */,
-				040161D2246E892400D58FFC /* BuildAccountflow */,
 				04401D20246A8BB4003E33C7 /* Worker */,
 				04401D0A246A7CAB003E33C7 /* Dashboardflow */,
 				04401CFC246A7666003E33C7 /* Loginflow */,
-				04401CFE246A775E003E33C7 /* Personalflow */,
+				04401CFE246A775E003E33C7 /* RegistrationFlow */,
 				04401CFF246A7780003E33C7 /* Choosestoreflow */,
 				04401D17246A7F48003E33C7 /* Socialflow */,
 				04401D18246A7F54003E33C7 /* Historyflow */,
@@ -300,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				8B1F583D2494F347007B7B46 /* DisplayProfile.swift */,
-				8BDDDE892495C1A10013AC7B /* Registration.swift */,
 				8BDDDE8D2496549E0013AC7B /* Profile.swift */,
+				8BDDDE892495C1A10013AC7B /* Registration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

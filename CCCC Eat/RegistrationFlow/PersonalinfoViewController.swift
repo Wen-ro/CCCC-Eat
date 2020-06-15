@@ -106,7 +106,7 @@ class PersonalinfoViewController: UIViewController {
         switch segue.identifier {
         case "moveToChoosestoreSegue2":
             
-            let destination : ChoosestoreViewController = segue.destination as! ChoosestoreViewController
+//            let destination : ChoosestoreViewController = segue.destination as! ChoosestoreViewController
             
             break
         default:

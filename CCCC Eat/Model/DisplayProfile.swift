@@ -13,7 +13,10 @@ import Alamofire
 // MARK: - Profile工作
 class DisplayProfile {
     var id: Int = 0
+    
+    var account : String = "N/A"
     var name : String = "N/A"
+    var password : String = "N/A"
 
     var age : Int = 0
     var height : Float = 0
